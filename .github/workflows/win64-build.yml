@@ -23,14 +23,14 @@ jobs:
       
     - name: Build (x64) Debug
       run: |
-        cmake --build --preset x64-debug
+        cmake --preset x64-debug
         cmake --build ./out/build/x64-debug
       env:
         BUILD_TYPE: Debug
     
     - name: Build (x64) Release
       run: |
-        cmake --build --preset x64-release
+        cmake --preset x64-release
         cmake --build ./out/build/x64-release
       env:
         BUILD_TYPE: Release
