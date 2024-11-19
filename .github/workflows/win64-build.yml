@@ -1,0 +1,31 @@
+name: windows AMD64 Build Test
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: windows-2022
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v2
+      with:
+        msbuild-architecture: x64
+
+      
+    - name: Build (x64) Debug
+      run: |
+        cmake --build --preset x64-debug
+        cmake --build ./out/build/x64-debug
+      env:
+        BUILD_TYPE: Debug
+    
+    - name: Build (x64) Release
+      run: |
+        cmake --build --preset x64-release
+        cmake --build ./out/build/x64-release
+      env:
+        BUILD_TYPE: Release
