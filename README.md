@@ -3,6 +3,19 @@
 
 ## 如何开发
 
+标准的构建环境：
+- Windows 2022
+- Visual Studio 2022
+- Python 3.13
+
+
+### clone项目
+
+```bash
+git clone git@github.com:cr49-lib/easydbg-script.git # clone 项目
+git submodule update --init --recursive # 更新子模块
+```
+
 ### 安装依赖
 
 依赖项:
