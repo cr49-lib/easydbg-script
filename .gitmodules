@@ -1,0 +1,4 @@
+[submodule "easydbg_script/extern/pybind11"]
+	path = easydbg_script/extern/pybind11
+	url = ../../pybind/pybind11
+	branch = stable
