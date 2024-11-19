@@ -9,6 +9,9 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+
+    - name: Submodule
+      run: git submodule update --init
     
     - name: Install Ninja
       uses: seanmiddleditch/gha-setup-ninja@master
