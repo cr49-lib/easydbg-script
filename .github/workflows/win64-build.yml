@@ -22,7 +22,14 @@ jobs:
       uses: ilammy/msvc-dev-cmd@v1
       with:
           arch: amd64
-
+          
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.13'
+        cache: 'pip'
+        
+    - name: Install Pybind11
+      run: pip install pybind11
       
     - name: Dir
       run: dir
