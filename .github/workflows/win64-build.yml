@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: windows-2022
+    runs-on: windows-latest
 
     steps:
     - name: Checkout
@@ -17,6 +17,9 @@ jobs:
 
     - name: Dir
       run: dir
+      
+    - name: Echo Cmake Version
+      run: cmake --version
       
     - name: Build (x64) Debug
       run: |
