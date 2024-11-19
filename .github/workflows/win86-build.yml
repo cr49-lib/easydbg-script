@@ -1,4 +1,4 @@
-name: windows AMD64 Build Test
+name: windows AMD86 Build Test
 
 on: [push, pull_request]
 
